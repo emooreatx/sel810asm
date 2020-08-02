@@ -88,8 +88,8 @@ def SELDISASM(opcode):
 					if nme == "CEU":
 						for a,(n,ch,th) in CEU_TEU_UNITS.items():
 							if unit == a:
-								second_word_hint = (ceu_breakdown,ch)
-								
+#								second_word_hint = (ceu_breakdown,ch)
+								second_word_hint = None								
 					elif nme == "TEU":
 						for a,(n,ch,th) in CEU_TEU_UNITS.items():
 							if unit == a:
