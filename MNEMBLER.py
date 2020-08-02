@@ -152,6 +152,7 @@ def asm_pass_1(ll,base_address=0):
 		if l.strip() != "":
 			(label,ismacroinst,op, indirect_bit, addridx, comment) = decompose_asm(l)
 			if op is not None or label is not None:
+				print(op)
 				if in_macro_name != None:
 					if op == "EMAC":
 						in_macro_name = None
@@ -407,7 +408,7 @@ def asm_pass_1(ll,base_address=0):
 									print("****\%s:%d generated the following error" % (filename,lnum+1))
 									traceback.print_exc()
 									sys.exit(-1)
-
+							print(op)
 							opcode = (INT_OPCODES[op] << 12) | augment_code
 							program_listing.append((lnum,cur_address,"DATA", LOADER_FORMATS[LITERAL_LOAD][1] | ( LOADER_BITMASKS["X_FLAG"] * x_flag ),lambda x=opcode, y=augment_code, z=cur_address:[parsearg(z,SYMBOLS, y)()|x],supress_output))
 							handled = True
