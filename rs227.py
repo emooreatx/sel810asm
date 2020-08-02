@@ -1,5 +1,5 @@
 import struct
-
+import sys
 
 START_CODE = 0xff
 CARRIAGE_RETURN = 0x8d
