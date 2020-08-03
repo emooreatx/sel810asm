@@ -21,3 +21,4 @@ PRNT HLT
      BRU  *-3
      BRU* PRNT
 TBLA DATA ''HELLO WORLD!''
+     END
